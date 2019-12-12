@@ -1,0 +1,46 @@
+
+.checked{
+    color: orange;
+}
+.detail_prices {
+    display: flex;
+    margin-bottom: 26px;
+    margin-top: 20px;
+    margin-left:0px;
+    color: #ff4136;
+    font-size: 30px;
+}
+.btn {
+    display: flex;
+}
+.btn li + li {
+    margin-left: 16px;
+}
+.btn li a {
+    border: 1px solid #d5d5d5;
+    display: block;
+    font-size: 18px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    width: 44px;
+    transition: 0.3s;
+}
+.btn li a:hover{
+    background: #ff4136;
+    border: 1px solid #ff4136;
+    color: #fff;
+}
+
+.btn li.buy__now__btn a {
+    color: #4b4b4b;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 175px;
+    transition: 0.3s;
+}
+.btn li.buy__now__btn a:hover{
+    color: #fff;
+    background: #ff4136;
+    border: 1px solid #ff4136;
+}
