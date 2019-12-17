@@ -5,7 +5,10 @@ body{
     line-height: 24px;
     -webkit-font-smoothing: antialiased;
 }
-
+.home{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
 .home a:hover{
     color: #ff4136;
     text-decoration: none;
@@ -69,8 +72,6 @@ body{
     transition: 0.3s;
     background: #e25049;
     margin-bottom: 50px;
-    
-
 }
 .btn.buy_now_btn a {
     color: #fff;
@@ -93,7 +94,6 @@ body{
     display: flex;
     justify-content: center;
 }
-
 .product_deatils_tab li a {
     color: #505050;
     font-size: 20px;
@@ -132,43 +132,8 @@ body{
     line-height: 30px;
     margin-bottom: 28px;
     text-transform: capitalize;
-}
-.pro_review {
-    display: flex;
-}
-.review_thumb {
-    margin-right: 30px;
-    min-width: 8%;
-}
-.review_info h4 {
-    color:#505050;
-    font-size: 20px;
-    line-height: 16px;
-    padding-right:10px;
-    text-transform: uppercase;
-}
-.review_info {
-    display: flex;
-    padding-top: 20px;
-}
-.review_date{
-    margin-top: -20px;
-    margin-left: -74%;
-}
-.review_date span {
-    color: #999;
-    font-size: 14px;
-}
-.review_details p {
-    color: #505050;
-    line-height: 26px;
-    font-size: 14px;
-    width: 82%;
-    text-align: justify;
-}
-.pro_review.ans {
-    margin-bottom: 50px;
-    margin-left: 50px;
+}.rating{
+    margin-left: -35px;
 }
 .rating1{
     margin-left:-100px;
@@ -188,42 +153,23 @@ body{
     margin-bottom: 10px;
     margin-left: -60px;
 }
-
-.review_box {
-    margin-top: 35px;
+.mt-30{
+    margin-top: 30px;
 }
-.review-box.name {
-    display: flex;
-    margin-bottom: 30px;
-    margin-left: 100px;
-    margin-right: 100px;
-    width: 80%;
+.date{
+    color: #666666;
 }
-.review-box.name input {
-    border: 1px solid #999;
-    height: 40px;
-    margin: 0 15px;
-    padding: 0 15px;
-    width: 42%;
-   
-}
-.review-box.message textarea {
-    background: transparent none repeat scroll 0 0;
-    border: 1px solid #999;
-    height: 100px;
-    width: 80%;
-    padding-left: 20px;
-    
-}
-
-.review-box textarea::-moz-placeholder {
-  color: #333 !important;
-  opacity: 1 !important;
+.text{
+    font-size: 14px;
+    color: #505050;
 }
 .icon-person{
     height: 100px;
     width: 100px;
-    margin-top: 20px;
+    
     margin-left: -30px;
+}
+h5{
+    text-transform: uppercase;
 }
 
