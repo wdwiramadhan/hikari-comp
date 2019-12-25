@@ -24,6 +24,9 @@
 .star{
     color: rgb(254, 211, 48);
 }
+.mt-footer{
+    margin-top: 90px;
+}
 .futer a{
     color: white
 }
