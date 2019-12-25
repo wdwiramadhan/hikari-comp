@@ -7,26 +7,19 @@
   <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
   <link rel="stylesheet" href="css/custom.css">
-  <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
   <title>Store</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-custom">
         <div class="container">
-          <a class="navbar-brand" href="index.html">Hikari Comp</a>
+          <a class="navbar-brand font-weight-bold" href="index.html">Hikari Comp</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -79,19 +72,55 @@
             </nav>
         </div>
     </div>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <div id="mapid" style=" height: 520px;"></div>
+      </div>
+    </div>
   </div>
-  <div id="map"></div>
+  <div class="futer mt-footer">
+    <footer class="text-light bg-custom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 mt-4">
+                    <h5>About Us</h5>
+                    <p class="mb-0">
+                        Hikari-Comp adalah sebuah toko online computer di semarang. Kami menyediakan berbagai jenis merek laptop dan komputer yang kualitasnya sudah tidak diragukan lagi
+                    </p>
+                </div>
+                <div class="col-md-3 col-sm-12 offset-md-3 mt-4">
+                    <h5>Find me on</h5>
+                    <div class="sosmed">
+                        <span><a href="http://facebook.com/hikaricomp">
+                            <i class="fab fa-facebook-square fa-3x mr-2"></i> 
+                        </a></span>                 
+                        <span> <a href="http://instagram.com/hikaricomp">
+                            <i class="fab fa-instagram fa-3x mr-2"></i> 
+                        </a></span>                 
+                        <span> <a href="http://twitter.com/hikaricomp">
+                            <i class="fab fa-twitter fa-3x"></i> 
+                        </a></span>                 
+                    </div>
+                </div>
+                <div class="offset-md-11 col-md-1 col-sm-12 copyright mt-3">
+                    <p class="float-left">
+                      <a href="#" class="btn text-white"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+  </div>
   <script>
-    // Initialize and add the map
-    function initMap() {
-      // The location of store
-      var store = {lat: -6.9932, lng: 110.4203};
-      // The map, centered at store
-      var map = new google.maps.Map(
-          document.getElementById('map'), {zoom: 18, center: store});
-      // The marker, positioned at store
-      var marker = new google.maps.Marker({position: store, map: map});
-    }
+    var mymap = L.map('mapid').setView([-6.985122, 110.404655], 14);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        accessToken: 'pk.eyJ1Ijoid2R3aXJhbWFkaGFuIiwiYSI6ImNrNGwwdmF6bTI1Mjgzb3FxZWpxODNqMTAifQ.CrGH7Ok4VGgwEISOMkB1bA'
+    }).addTo(mymap);
+    var marker = L.marker([-6.985122, 110.404655]).addTo(mymap);
+    marker.bindPopup("Location Our Store").openPopup();
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcbD45TINoYY46at__CbQZY__TNvcoX8U&callback=initMap"
   async defer></script>
