@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/custom.css">
-  <link rel="stylesheet" href="css/product.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/custom.css">
   <title>Product Details</title>
 </head>
 <body>
@@ -59,14 +57,19 @@
           </div>
         </div>
       </nav>
-      <nav class="bradcaump-inner home">
-            <a class="breadcrumb-item" href="index.html">Home</a>
-            <span class="brd-separetor">/</span>
-            <span class="breadcrumb-item active">Product Details</span>
-            </nav>
     <!-- card image -->
     <section class="text-center">
-            <div class="container">
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb bg-white">
+                                <li class="breadcrumb-item"><a href="index.html" class="text-link">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Product</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-12 col-lg-6">
                         <div class="card bg-light mb-3">
@@ -120,7 +123,6 @@
                             <div role="tabpanel" id="description" class="product_tab_content active">
                             <div class="product_description_wrap">
                                 <div class="product_desc">
-                                    <h2 class="title_6">Details</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis noexercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id.</p>
                             </div>
                     </div>
@@ -215,35 +217,33 @@
         </div>
     </section>
       <!-- Footer -->
-    <div class="futer">
+      <div class="futer mt-footer">
         <footer class="text-light bg-custom">
             <div class="container">
                 <div class="row">
-                    <div class="col-6 mt-3">
-                        <h5>About</h5>
-                        <!-- <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25"> -->
+                    <div class="col-md-6 col-sm-12 mt-4">
+                        <h5>About Us</h5>
                         <p class="mb-0">
-                            Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
+                            Hikari-Comp adalah sebuah toko online computer di semarang. Kami menyediakan berbagai jenis merek laptop dan komputer yang kualitasnya sudah tidak diragukan lagi
                         </p>
                     </div>
-                    <div class="col-3 offset-md-3 mt-3">
+                    <div class="col-md-3 col-sm-12 offset-md-3 mt-4">
                         <h5>Find me on</h5>
-                        <!-- <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25"> -->
                         <div class="sosmed">
-                            <span><a class="btn btn-lg" href="#">
-                                <i class="fab fa-facebook-square"></i> 
+                            <span><a href="http://facebook.com/hikaricomp">
+                                <i class="fab fa-facebook-square fa-3x mr-2"></i> 
                             </a></span>                 
-                            <span> <a class="btn btn-lg" href="#">
-                                <i class="fab fa-instagram"></i> 
+                            <span> <a href="http://instagram.com/hikaricomp">
+                                <i class="fab fa-instagram fa-3x mr-2"></i> 
                             </a></span>                 
-                            <span> <a class="btn btn-lg" href="#">
-                                <i class="fab fa-github"></i> 
+                            <span> <a href="http://twitter.com/hikaricomp">
+                                <i class="fab fa-twitter fa-3x"></i> 
                             </a></span>                 
                         </div>
                     </div>
-                    <div class="col-12 copyright mt-3">
+                    <div class="offset-md-11 col-md-1 col-sm-12 copyright mt-3">
                         <p class="float-left">
-                          <a href="#" class="btn btn-primary btn-block">Back to top</a>
+                          <a href="#" class="text-white"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
                         </p>
                     </div>
                 </div>
@@ -254,9 +254,5 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-
-
-
 </body>
 </html>
