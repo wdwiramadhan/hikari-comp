@@ -48,3 +48,11 @@
     border-color: #c23616;
     box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
   }
+
+  .text-link{
+      color: #EE5A24;
+  }
+  .text-link:hover{
+      text-decoration: none;
+      color: #c23616
+  }
