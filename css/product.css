@@ -1,10 +1,3 @@
-body{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    -webkit-font-smoothing: antialiased;
-}
 .home{
     margin-left: 20px;
     margin-bottom: 20px;
@@ -21,28 +14,8 @@ body{
     display: flex;
     height: 320px;
 }
-.bradcaump-title {
-    color: #343434;
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 30px;
-    text-transform: capitalize;
-}
-.breadcrumb-item {
-    color: #343434;
-    font-size: 18px;
-    text-transform: capitalize;
-}
-.breadcrumb-item.active {
-    color: #343434;
-    font-size: 18px;
-    text-transform: capitalize;
-}
 .brd-separetor {
     padding: 0 5px;
-}
-.bradcaump-inner {
-    margin-top: 23px;
 }
 
 .checked{
@@ -169,7 +142,5 @@ body{
     
     margin-left: -30px;
 }
-h5{
-    text-transform: uppercase;
-}
+
 
