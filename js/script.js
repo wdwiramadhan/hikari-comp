@@ -1,0 +1,2 @@
+// produk
+$( ".wow" ).addClass( "fadeInUp" );
