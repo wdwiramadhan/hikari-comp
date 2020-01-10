@@ -7,6 +7,9 @@
     background-color: #EE5A24;
     /* color: white; */
 }
+.bg-gold{
+    background-color: rgb(254, 211, 48);
+}
 .navbar{
     padding: 1%;
 }
@@ -22,6 +25,9 @@
     font-size: 20px;
 }
 .star{
+    color: #EE5A24;
+}
+.checked{
     color: rgb(254, 211, 48);
 }
 .mt-footer{
@@ -56,3 +62,24 @@
       text-decoration: none;
       color: #c23616
   }
+
+.warna{
+    color: #c23616;
+}
+.merah{
+    color: red;
+}
+  /* Produk */  
+.carousel-inner .carousel-item img{
+    width: 855px;
+    height: 500px;
+}
+
+.card .gambar img{
+    height: 200px;
+    width: 100%;
+}
+.card-body .produk-img img{
+    height: 430px;
+    width: 100%;
+}
