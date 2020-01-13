@@ -59,7 +59,7 @@
   </nav>
   <!-- checkout form -->
   <div class="container">
-    <div class="row">
+    <div class="row mt-4">
         <div class="col">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-white">
@@ -79,21 +79,25 @@
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-condensed">
             <div>
-              <h6 class="my-0">Product name</h6>
-              <small class="text-muted">Brief description</small>
+              <h6 class="my-0" id="tampilProduct">Product Name</h6>
             </div>
-            <span class="text-muted">Rp 15.000.000</span>
+            <span class="text-muted" id="tampilHarga">0</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Expedition</h6>
+            </div>
+            <span class="text-muted" id="tampilOngkir">0</span>
           </li>
           <li class="list-group-item d-flex justify-content-between bg-light">
             <div class="text-success">
-              <h6 class="my-0">Promo code</h6>
-              <small>EXAMPLECODE</small>
+              <h6 class="my-0">Discount</h6>
             </div>
-            <span class="text-success">-Rp 100.000</span>
+            <span class="text-success">0</span>
           </li>
           <li class="list-group-item d-flex justify-content-between">
             <span>Total (Rp)</span>
-            <strong>Rp 15.000.000</strong>
+            <strong id="total">0</strong>
           </li>
         </ul>
   
@@ -108,138 +112,104 @@
       </div>
       <div class="col-md-8 order-md-1">
         <h4 class="mb-3">Shipping address</h4>
-        <form class="needs-validation" novalidate>
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <!-- <label for="firstName">Nama depan</label> -->
-              <input type="text" class="form-control" id="firstName" placeholder="nama depan" value="" required>
-              <div class="invalid-feedback">
-                Valid first name is required.
-              </div>
-            </div>
-            <div class="col-md-6 mb-3">
-              <!-- <label for="lastName">Nama belakang</label> -->
-              <input type="text" class="form-control" id="lastName" placeholder="nama belakang" value="" required>
-              <div class="invalid-feedback">
-                Valid last name is required.
-              </div>
-            </div>
-          </div>
-  
-          <div class="mb-3">
-            <!-- <label for="email">Email <span class="text-muted">(Optional)</span></label> -->
-            <input type="email" class="form-control" id="email" placeholder="Email">
-            <div class="invalid-feedback">
-              Please enter a valid email address for shipping updates.
-            </div>
-          </div>
-
-          <div class="mb-3">
-            <!-- <label for="email">Email <span class="text-muted">(Optional)</span></label> -->
-            <input type="email" class="form-control" id="phone" placeholder="No. Telephone">
-            <div class="invalid-feedback">
-              Please enter a valid phone for shipping updates.
-            </div>
-          </div>
-  
-          <div class="mb-3">
-            <!-- <label for="address">Alamat lengkap</label> -->
-            <input type="text" class="form-control" id="address" placeholder="Alamat lengkap" required>
-            <div class="invalid-feedback">
-              Please enter your shipping address.
-            </div>
-          </div>
-  
-          <div class="mb-3">
-            <!-- <label for="address2">Kota/Kabupaten</label> -->
-            <input type="text" class="form-control" id="address2" placeholder="kota/Kabupaten">
-          </div>
-  
-          <div class="row">
-            <div class="col-md-5 mb-3">
-              <label for="country">Negara</label>
-              <select class="custom-select d-block w-100" id="country" required>
-                <option value="">Pilih...</option>
-                <option>Indonesia</option>
-              </select>
-              <div class="invalid-feedback">
-                Please select a valid country.
-              </div>
-            </div>
-            <div class="col-md-3 mb-3">
-                <label for="zip">Provinsi</label>
-                <input type="text" class="form-control" id="zip" placeholder="Jawa Tengah" required>
-                <div class="invalid-feedback">
-                    Please provide a valid state.
+        <div class="card">
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2 col-12">
+                    <label for="product" class="form-control-label">Product</label>
+                  </div>
+                  <div class="col-md-10 col-12">
+                    <select class="form-control" name="product" id="product" required>
+                      <option value=" ">-- Select Product --</option>
+                      <option value="8000000">Thinkpad X1 Carbon</option>
+                      <option value="5000000">Thinkpad T450S</option>
+                      <option value="9000000">DELL Inspiron</option>
+                      <option value="10000000">Acer Nitro</option>
+                      <option value="10000000">HP Pavillion</option>
+                    </select>
+                  </div>
                 </div>
               </div>
-            <div class="col-md-3 mb-3">
-              <label for="zip">Kode Pos</label>
-              <input type="text" class="form-control" id="zip" placeholder="503181" required>
-              <div class="invalid-feedback">
-                Zip code required.
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2 col-12">
+                    <label for="name" class="form-control-label">Name</label>
+                  </div>
+                  <div class="col-md-10 col-12">
+                    <input class="form-control" type="text" name="name" id="name" autocomplete="off">
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <hr class="mb-4">
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="save-info">
-            <label class="custom-control-label" for="save-info">simpan informasi ini untuk lain kali</label>
-          </div>
-          <hr class="mb-4">
-  
-          <h4 class="mb-3">Payment</h4>
-  
-          <div class="d-block my-3">
-            <div class="custom-control custom-radio">
-              <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-              <label class="custom-control-label" for="credit">Credit card</label>
-            </div>
-            <div class="custom-control custom-radio">
-              <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-              <label class="custom-control-label" for="debit">Debit card</label>
-            </div>
-            <div class="custom-control custom-radio">
-              <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-              <label class="custom-control-label" for="paypal">PayPal</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="cc-name">Name on card</label>
-              <input type="text" class="form-control" id="cc-name" placeholder="Shawn Mendes" required>
-              <small class="text-muted">Full name as displayed on card</small>
-              <div class="invalid-feedback">
-                Name on card is required
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2 col-12">
+                    <label for="email" class="form-control-label">Email</label>
+                  </div>
+                  <div class="col-md-10 col-12">
+                    <input class="form-control" type="text" name="email" id="email" autocomplete="off">
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="cc-number">Credit card number</label>
-              <input type="text" class="form-control" id="cc-number" placeholder="5523 2124 1154 8907" required>
-              <div class="invalid-feedback">
-                Credit card number is required
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2 col-12">
+                    <label for="telephone" class="form-control-label">Telephone</label>
+                  </div>
+                  <div class="col-md-10 col-12">
+                    <input class="form-control" type="text" name="telephone" id="telephone" autocomplete="off" placeholder="Ex. 08572799123">
+                  </div>  
+                </div>
               </div>
-            </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2 col-12">
+                    <label for="expedition" class="form-control-label">Expedition</label>
+                  </div>
+                  <div class="col-md-10 col-12">
+                    <select class="form-control" name="expedition" id="expedition" required>
+                      <option>-- Select Expedition --</option>
+                      <option value="90000">JNT</option>
+                      <option value="80000">JNE</option>
+                      <option value="70000">SiCepat</option>
+                    </select>
+                  </div>  
+                </div>
+              </div>
+              <div class="form mb-3">
+                <div class="row mt--2">
+                  <div class="col-md-2 col-12">
+                    <label class="form-control-label">Alamat</label>
+                  </div>
+                  <div class="col-md-10 col-12">
+                    <div class="row">
+                      <div class="col-md-4 col-12 mb-2">
+                        <select class="form-control" name="city">
+                          <option>-- Select Provinsi --</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4 col-12 mb-2">
+                        <select class="form-control" name="districts">
+                          <option></option>
+                        </select>
+                      </div>
+                      <div class="col-md-4 col-12 mb-2">
+                        <select class="form-control" name="village">
+                          <option></option>
+                        </select>
+                      </div>
+                      <div class="col-md-12 col-12">
+                        <textarea class="form-control" name="address" rows="3"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="button" name="submit" class="btn btn-orange btn-block mt-5 paynow" data-toggle="modal" data-target="#exampleModal">Paynow</button>
+            </form>
           </div>
-          <div class="row">
-            <div class="col-md-3 mb-3">
-              <label for="cc-expiration">Expiration</label>
-              <input type="text" class="form-control" id="cc-expiration" placeholder="09/22" required>
-              <div class="invalid-feedback">
-                Expiration date required
-              </div>
-            </div>
-            <div class="col-md-3 mb-3">
-              <label for="cc-cvv">CVV</label>
-              <input type="text" class="form-control" id="cc-cvv" placeholder="134" required>
-              <div class="invalid-feedback">
-                Security code required
-              </div>
-            </div>
-          </div>
-          <hr class="mb-4">
-        <button class="btn btn-danger btn-lg btn-block" type="submit">Continue to checkout</button>
-     </form>
+        </div>
       </div>
     </div>
   </div>
@@ -277,16 +247,235 @@
             </div>
         </div>
     </footer>
+  </div>  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Payment</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-3 mt-2">
+                <label for="product">Product</label>
+              </div>
+              <div class="col-md-9">
+                <input type="text" class="form-control-plaintext modal-product" id="product">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-3 mt-2">
+                <label for="name">Name</label>
+              </div>
+              <div class="col-md-9">
+                <input type="text" class="form-control-plaintext modal-name" id="name">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-3 mt-2">
+                <label for="numberphone">No. Phone</label>
+              </div>
+              <div class="col-md-9">
+                <input type="text" class="form-control-plaintext modal-numberphone" id="numberphone">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-3 mt-2">
+                <label for="email">Email</label>
+              </div>
+              <div class="col-md-9">
+                <input type="email" class="form-control-plaintext modal-email" id="email">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-3 mt-2">
+                <label for="expedition">Expedition</label>
+              </div>
+              <div class="col-md-9">
+                <input type="text" class="form-control-plaintext modal-expedition" id="expedition">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-3 mt-2">
+                <label for="address">Address</label>
+              </div>
+              <div class="col-md-9">
+                <textarea class="form-control-plaintext modal-address" id="address"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="alert alert-warning" role="alert">
+          <a id="modalTotalHarga"></a><br>
+          <a>Transfer ke 231299421321123 (BRI) - Ardi Sanjaya </a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
   </div>
-
-
-  
-    
-
 <!-- Js Script -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(()=>{
+      $('[name=product]').change(()=>{
+        let product = $('[name=product] option:selected').text()
+        let hargaProduct = parseInt($('[name=product]').val())
+        let ongkir =  parseInt($('[name=expedition]').val())
+        if(isNaN(ongkir) ){
+          ongkir = 0
+        }
+        $('#tampilProduct').text(product)
+        $('#tampilHarga').text(`Rp ${hargaProduct}`)
+        $('#total').text(`Rp ${hargaProduct + ongkir}`)
+      })
+      $('[name=expedition]').change(()=>{
+        let ongkir =  parseInt($('[name=expedition]').val())
+        let hargaProduct = parseInt($('[name=product]').val())
+        $('#tampilOngkir').text(`Rp ${ongkir}`)
+        $('#total').text(`Rp ${ongkir + hargaProduct}`)
+      })
+      $('[name=submit').click((e) => {
+        e.preventDefault()
+      })
+    })
+</script>
+ <script>
+  var token = function() {
+    var tmp = null;
+    $.ajax({
+      'async': false,
+      'type': "get",
+      'global': false,
+      'dataType': 'json',
+      'url': 'https://x.rajaapi.com/poe',
+      'success': function(data) {
+          tmp = data.token;
+      }
+    });
+    return tmp;
+  }();
+  function getToken(){
+    fetch('https://x.rajaapi.com/poe')
+      .then((res)=>{
+        res = res.json()
+        console.log(res)
+      })
+  }
+  
+  getToken()
+  async function getCity(){
+    try{
+      const res = await fetch(`https://x.rajaapi.com/MeP7c5ne${token}/m/wilayah/provinsi`)
+      const cities = await res.json()
+      cities.data.forEach((city) => {
+        document.querySelector('[name=city]').innerHTML +=
+        ` <option id="${city.id}" value="${city.name}">${city.name}</option>`
+      })
+    }catch(err){
+      console.log(err)
+    }
+  }
+  getCity()
 
+  async function getDistricts(id){
+    try{
+      const res = await fetch(`https://x.rajaapi.com/MeP7c5ne${token}/m/wilayah/kabupaten?idpropinsi=${id}`)
+      const districts = await res.json()
+      document.querySelector('[name=districts]').innerHTML = ' '
+      districts.data.forEach( (district) => {
+        document.querySelector('[name=districts]').innerHTML +=
+        ` <option id="${district.id}" value="${district.name}">${district.name}</option>`
+      })
+    }catch(error){
+      console.log(error)
+    }
+  }
+
+  const btnGetCity = document.querySelector('[name=city]')
+  btnGetCity.addEventListener('change', () => {
+    var id
+    let value = document.querySelector('[name=city]').value
+    let listNodeCity = document.querySelectorAll('[name=city] option')
+    for(i = 0; i< listNodeCity.length; i++){
+      if(value == listNodeCity[i].value){
+        id = listNodeCity[i].id
+        break;
+      }
+    }
+    getDistricts(id)
+  })
+
+  async function getVillage(id){
+    try{
+      const res = await fetch(`https://x.rajaapi.com/MeP7c5ne${token}/m/wilayah/kecamatan?idkabupaten=${id}`)
+      const village = await res.json()
+      console.log(village)
+      document.querySelector('[name=village]').innerHTML = 0
+      village.data.forEach( (vlg) => {
+        document.querySelector('[name=village]').innerHTML +=
+        ` <option id="${vlg.id}" value="${vlg.name}">${vlg.name}</option>`
+      })
+    }catch(error){
+      console.log(error)
+    }
+  }
+
+  const btnGetDistrict = document.querySelector('[name=districts]')
+  btnGetDistrict.addEventListener('change', () => {
+    var id
+    let value = document.querySelector('[name=districts]').value
+    let listNodedistricts = document.querySelectorAll('[name=districts] option')
+    for(i = 0; i< listNodedistricts.length; i++){
+      if(value == listNodedistricts[i].value){
+        id = listNodedistricts[i].id
+        break;
+      }
+    }
+    getVillage(id)
+  })
+</script>
+ <script>
+  $(document).ready(()=>{
+    $('.paynow').click(()=>{
+      let product = $('[name=product] option:selected').text()
+      let name = $('[name=name]').val()
+      let numberphone = $('[name=telephone]').val()
+      let email = $('[name=email]').val()
+      let expedition = $('[name=expedition] option:selected').text()
+      let address = `${$('[name=city]').val()}, ${$('[name=districts]').val()}, ${$('[name=village]').val()}, ${$('[name=address]').val()}`
+      let totalHarga =  $('#total').text()
+
+      $('.modal-product').val(product)
+      $('.modal-name').val(name)
+      $('.modal-numberphone').val(numberphone)
+      $('.modal-email').val(email)
+      $('.modal-expedition').val(expedition)
+      $('.modal-address').val(address)
+      $('#modalTotalHarga').text(totalHarga)
+    })
+  })
+</script>
 </body>
 </html>
