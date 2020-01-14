@@ -206,8 +206,8 @@
                         </select>
                       </div>
                       <div class="col-md-12 col-12">
-                        <textarea class="form-control" name="address" rows="3"></textarea>
-                      </div>
+                        <textarea class="form-control" name="address" rows="3" placeholder="Address"></textarea>
+                      </div>  
                     </div>
                   </div>
                 </div>
@@ -479,7 +479,7 @@
       $('.modal-email').val(email)
       $('.modal-expedition').val(expedition)
       $('.modal-address').val(address)
-      $('#modalTotalHarga').text(totalHarga)
+      $('#modalTotalHarga').text(`Total ${totalHarga}`)
     })
   })
 </script>
